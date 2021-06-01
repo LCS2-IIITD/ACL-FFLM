@@ -41,9 +41,19 @@ data
 ## Running the code
 
 ### TL;DR
+You can skip the pre-processing and the Create Splits part by directly downloading some custome defined datasets from <a href = "https://drive.google.com/drive/folders/1r9129JJ3QTtF0r-aQ6fSXtSzbEb8RGHo?usp=sharing">here</a>.
 
+#### Pre-process the dataset
+
+<p align = "justify"> 
+  First, we pre-process the complete dataset using the data present in the folder cd splits
+  Select the type of data (organic/synthetic) you want to pre-process using the parameter synthetic in the file.
+  This would create a 
+</p>
+
+### Create Train, Test and Validation Splits
 <p align = "justify">
-For running the best performing model, first create splits of train, test and validation data. The parameters such as min length of sentences (default 6), lowercase sentences, size of train (max and default 800/class), validation (max and default 100/class) and test (max and default 200/class),number of classes (max  and default 108) can be set internally in the  ```create_splits.py``` under the  commented PARAMETERS Section.
+For running the best performing model, first create splits of train, test and validation data. The parameters such as min length of sentences (default 6), lowercase sentences, size of train (max and default 800/class), validation (max and default 100/class) and test (max and default 200/class),number of classes (max  and default 108) can be set internally in the create_splits.py in the splits folder under the  commented PARAMETERS Section.
 </p>
   
 ```bash
@@ -55,7 +65,8 @@ This creates a folder in the folder ```dataset/synthetic/splits/[min_len_of_sent
 
 The train, validation and test datasets are all stored in the same file with the filename   ```[#CLASSES]_[#TRAIN_SET_SIZE]_[#VAL_SET_SIZE]_[#TEST_SET_SIZE]_dataset.json``` like ```108_800_100_200_dataset.json```.
 
-Now fix the same parameters in the seq 
+### Running the model
+Now fix the same parameters in the seq_classification.py file 
 To run the model - 
 
 ```bash
