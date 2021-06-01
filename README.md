@@ -27,7 +27,6 @@ Download the dataset as follows -
 
 <ol>
   <li> Download the 2 folders organic and synthetic, containing the comments from individual classes.
-  <li> Download the <i> authors.txt </i> file. It contains a list of all the classes.
   <li> Store them in the data folder in the following format.
 </ol>
 
@@ -40,10 +39,10 @@ data
 
 ## Running the code
 
-### TL;DR
-You can skip the pre-processing and the Create Splits part by directly downloading some custome defined datasets from <a href = "https://drive.google.com/drive/folders/1r9129JJ3QTtF0r-aQ6fSXtSzbEb8RGHo?usp=sharing">here</a>.
+#### TL;DR
+You can skip the pre-processing and the Create Splits if you want to run the code on some custom datasets available in the dataset/splits folder.
 
-#### Pre-process the dataset
+### Pre-process the dataset
 
 <p align = "justify"> 
   First, we pre-process the complete dataset using the data present in the folder cd splits
@@ -60,14 +59,13 @@ For running the best performing model, first create splits of train, test and va
 cd splits
 python3 create_splits.py
 ```
-
 This creates a folder in the folder ```dataset/synthetic/splits/[min_len_of_sentence/min_nf_tokens = 6]/```.
 
 The train, validation and test datasets are all stored in the same file with the filename   ```[#CLASSES]_[#TRAIN_SET_SIZE]_[#VAL_SET_SIZE]_[#TEST_SET_SIZE]_dataset.json``` like ```108_800_100_200_dataset.json```.
 
 ### Running the model
-Now fix the same parameters in the seq_classification.py file 
-To run the model - 
+Now fix the same parameters in the seq_classification.py file.
+To train and test the best model (Fine-tuned GPT2/ RoBERTa) - 
 
 ```bash
 cd generate_embeddings/ft/
@@ -75,10 +73,6 @@ python3 seq_classification.py
 ```
 
 A ```results``` folder will be generated which will contain the results of each epoch.
-
-### For developers
-
-Coming Soon ...
 
 ## 👪 Contributing
 
