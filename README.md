@@ -1,6 +1,7 @@
 # 🌳 Fingerprinting Fine-tuned Language Models in the wild <br>
 
 This is the code and dataset for our ACL 2021 (Findings) Paper - <b> Fingerprinting Fine-tuned Language Models in the wild </b>.<br>
+The paper is available  <a href = "https://aclanthology.org/2021.findings-acl.409/"> here </a>. 
 
 ## Clone the repo
 
